@@ -1,0 +1,76 @@
+:root{
+  --bg:#ffffff;
+  --text:#1f2937;
+  --muted:#f9fafb;
+  --primary:#ea580c;
+  --primary-dark:#c2410c;
+  --border:#e5e7eb;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.65;
+}
+.container{width:min(1120px,92%);margin:0 auto}
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:#fff;border-bottom:1px solid var(--border);
+}
+.nav-wrap{
+  display:flex;justify-content:space-between;align-items:center;padding:14px 0;
+}
+.logo{
+  text-decoration:none;color:var(--text);font-weight:700;font-size:1.15rem;
+}
+.nav-links{
+  list-style:none;display:flex;gap:14px;margin:0;padding:0;
+}
+.nav-links a{
+  text-decoration:none;color:#374151;font-weight:600;
+}
+.hero{padding:50px 0}
+.hero-grid{
+  display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;
+}
+.hero img{
+  width:100%;border-radius:12px;border:1px solid var(--border);
+}
+.section{padding:54px 0}
+.muted{background:var(--muted)}
+h1,h2,h3{line-height:1.25}
+.cards{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;
+}
+.card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;
+}
+.card img{
+  width:100%;height:180px;object-fit:cover;
+}
+.card-body{padding:14px}
+.article article{max-width:880px}
+.btn{
+  display:inline-block;background:var(--primary);color:#fff;text-decoration:none;border:none;
+  padding:10px 16px;border-radius:8px;font-weight:700;cursor:pointer;
+}
+.btn:hover{background:var(--primary-dark)}
+.contact-form{
+  max-width:620px;display:grid;gap:10px;
+}
+input,textarea{
+  width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;font:inherit;
+}
+.site-footer{
+  border-top:1px solid var(--border);padding:18px 0;background:#fff;
+}
+.footer-wrap{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.footer-wrap a{text-decoration:none;color:#374151}
+.legal h1{margin-top:0}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+}
